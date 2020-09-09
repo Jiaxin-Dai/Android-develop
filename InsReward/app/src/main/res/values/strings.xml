@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Rewards</string>
+    <string name="act_create">Create Profile</string>
+    <string name="act_profile">Your Profile</string>
+    <string name="act_leader">Inspiration Leaderboard</string>
+    <string name="act_edit">Edit Profile</string>
+    <string name="checkBox">Remember my credentials</string>
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="username">UserName</string>
+    <string name="tap_here_to_create_a_profile">Tap here to create a profile</string>
+    <string name="select_password">Select Password</string>
+    <string name="select_username">Select UserName</string>
+    <string name="first_name">Enter First Name</string>
+    <string name="last_name">Enter Last Name</string>
+    <string name="department">Select Department</string>
+    <string name="position">Enter your position</string>
+    <string name="story">Tell us something about yourself!</string>
+    <string name="admin_user">Administrator User</string>
+    <string name="depart">Department:</string>
+    <string name="posit">Position:</string>
+    <string name="sto">Your Story:</string>
+    <string name="points_awarded">Points Awarded:</string>
+    <string name="points_to_award">Points to Award:</string>
+    <string name="reward_to_send">Reward points to send:</string>
+    <string name="comments">Comment:</string>
+    <string name="base_url">http://inspirationrewardsapi-env.6mmagpm2pv.us-east-2.elasticbeanstalk.com</string>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <!--TextView: conversion-->
+    <TextView
+        android:id="@+id/conversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorButtonBg"
+        android:text="@string/conversion"
+        android:textColor="@color/titleColor"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--EditText: input-->
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/colorTextBg"
+        android:gravity="center"
+        android:inputType="numberSigned|numberDecimal"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--TextView: output-->
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/colorTextBg"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert" />
+
+    <!--TextView: history-->
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorTextBg"
+        android:scrollbars="vertical"
+        android:gravity="start|top"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConverH" />
+
+    <!--TextView: Fahrenheit Degree-->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/fahrenheit"
+        android:textColor="@color/titleColor"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--TextView: Celsius Degree-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/celsius"
+        android:textColor="@color/titleColor"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert" />
+
+    <!--TextView: Conversion History-->
+    <TextView
+        android:id="@+id/ConverH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/conversion_history"
+        android:textColor="@color/titleColor"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup" />
+
+    <!--RadioGroup-->
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@id/ftc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conversion">
+
+        <!--RadioButton: ftc-->
+        <RadioButton
+            android:id="@+id/ftc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="RadioClicked"
+            android:text="@string/fahrenheit_to_celsius"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <!--RadioButton: ctf-->
+        <RadioButton
+            android:id="@+id/ctf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="RadioClicked"
+            android:text="@string/celsius_to_fahrenheit"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"/>
+
+    </RadioGroup>
+
+    <!--Button: CONVERT-->
+    <Button
+        android:id="@+id/convert"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/colorButtonBg"
+        android:onClick="Convert"
+        android:text="@string/convert"
+        android:textColor="@color/titleColor"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <!--Button: CLEAR-->
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorButtonBg"
+        android:onClick="Clear"
+        android:text="@string/clear"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/titleColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
